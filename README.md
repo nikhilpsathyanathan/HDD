@@ -26,7 +26,7 @@ And of course Deep Scan itself is open source with a [public repository][dill]
 
 Deep Scan requires [python] 3.x to run.
 
-Install the dependencies and devDependencies and start the server.
+Install the dependencies and packages and start the server.
 
 ```sh
 $ cd HDD
@@ -34,16 +34,16 @@ $ pip3 install -r requirement.txt
 $ python3 server.py
 ```
 
-The train.csv should be the root directory and call beofre server start
+The train.csv should be the root directory and call before server starts
 
-### Test data preprocessing
+### Test data pre-processing
 
 ```sh
 python3 train_preprocess.py 
 ```
 
 ### Python packages used
-Deep Scan need folowing packages to star run.
+Deep Scan need following packages to star run.
 
 | Package | Description |
 | ------ | ------ |
