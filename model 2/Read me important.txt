@@ -1,0 +1,9 @@
+Add train.csv in this folder
+this is a window based anaysis to predict whether a drive fail within 3 days or not
+
+run python3 model2_preprocess.py 
+it would generate model2.csv for prediction
+
+then run python3 model2_predict.py
+
+it would show the accuracy and confusion matrix of the model 
