@@ -34,12 +34,22 @@ $ pip3 install -r requirement.txt
 $ python3 server.py
 ```
 
-The train.csv should be the root directory and call before server starts
+- It would show how many HDD would fail 
+- The train.csv should be the root directory and call before server starts
 
 ### Test data pre-processing
 
 ```sh
 python3 train_preprocess.py 
+```
+- would generate csv file for each model 
+
+### Model 2 
+it is window based analysis to predict failure before 3 days
+
+```sh
+python3 model2_preprocess.py 
+python3 model2_predict.py 
 ```
 
 ### Python packages used
