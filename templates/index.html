@@ -1,0 +1,159 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Deep Scan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/server.js') }}"></script>
+</head>
+
+<body>
+
+    <div class="hero-head">
+        <header class="navbar role=" navigation" aria-label="main navigation"">
+                <div class=" navbar-brand">
+            <a class="navbar-item" href="/" style="margin-left:10px">
+                <img src="/static/logo.png" alt="Deep Scan"
+                    width="112" height="32" />
+            </a>
+            <span class="navbar-burger" data-target="navbarMenuHeroC">
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </span>
+    </div>
+    <div id="navbarMenuHeroC" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item is-active" href="/">
+                Home
+            </a>
+            <a class="navbar-item" href="/price">
+                Pricing
+            </a>
+            <a class="navbar-item" href="https://github.com/nikhilpsathyanathan/HDD/blob/master/README.md">
+                Documentation
+            </a>
+            <span class="navbar-item">
+                <a class="button is-success is-inverted" href="https://github.com/nikhilpsathyanathan/HDD">
+                    <span class="icon">
+                        <i class="fab fa-github"></i>
+                    </span>
+                    <span>Download</span>
+                </a>
+            </span>
+        </div>
+    </div>
+
+    </header>
+    </div>
+
+    <section class="hero is-medium is-primary is-bold is-fullheight-with-navbar">
+        <div class="hero-body">
+            <div class="container is-mobile is-multiline is-centered">
+                <div class="columns">
+                    <div class="column">
+                        <br>
+                        <h1 class="title is-size-1 has-text-centered">Deep Scan</h1>
+                        </br>
+                        <h2 class="subtitle has-text-centered">
+                            One Step Ahead
+                        </h2>
+                        <h1 class="has-text-centered">
+                            <a class="button is-rounded " onclick="scroll_to()" style="margin:20px">Try it now</a>
+                        </h1>
+                    </div>
+                    <div class="column">
+                        <figure class="image is-3by1">
+                            <img src="/static/logo.png">
+                        </figure>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div>
+        <section class="hero is-white">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title  is-size-2">
+                        <p class="has-text-centered is-capitalized">A Smart Move For A Better Tomorrow</p>
+                    </h1>
+                </div>
+            </div>
+    </div>
+
+    <div class="container " id="try">
+        </br>
+        <h1 class="title  is-size-2">
+            <p class="has-text-centered is-capitalized">Want to Try </p>
+        </h1>
+        <section class="hero hero-body" is-medium ">
+                <div class=" columns is-desktop card " style=" margin:20px;padding:20px">
+            <div class="column ">
+                <h1 class="has-text-black-bis is-size-4 has-text-centered is-capitalized">Select your model</h1>
+                </br>
+                </br>
+                <div class="file is-medium is-centered">
+                    <form action="/csv" method="POST" enctype="multipart/form-data">
+                        <div class="select is-centered">
+                            <select name="model">
+                                <option value="ST4000DM000">ST4000DM000</option>
+                                <option value="ST8000DM002">ST8000DM002</option>
+                                <option value="ST8000NM0055">ST8000NM0055</option>
+                                <option value="ST12000NM0007">ST12000NM0007</option>
+                                <option value="ST500LM012 HN">ST500LM012 HN</option>
+                                <option value="Samsung SSD 850 EVO 1TB">Samsung SSD 850 EVO 1TB</option>
+                                <option value="HGST HMS5C4040BLE640">HGST HMS5C4040BLE640</option>
+                                <option value="HGST HMS5C4040ALE640">HGST HMS5C4040ALE640</option>
+                                <option value="TOSHIBA MQ01ABF050">TOSHIBA MQ01ABF050</option>
+                                <option value="all">ALL</option>
+                            </select>
+                        </div>
+                        </br>
+                        </br>
+                        <input type="file" name="csvfile" style="margin:20px">
+                        <input onclick="wait_msg()" class="button is-rounded is-primary " type="submit" value="Upload CSV" style="margin:20px">
+                    </form></br>
+                </div>
+            </div>
+    </div>
+    </section>
+    </div>
+
+    <section class="is-dark ">
+
+        <footer class="footer has-background-black-ter ">
+            <div class="content has-text-centered">
+                <p class="has-text-white">
+                    <strong class="has-text-white">Deep Scan</strong> Developed with ❤️ by <a href="/">Rainbow Six</a>
+                </p>
+            </div>
+        </footer>
+    </section>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+        if ($navbarBurgers.length > 0) {
+            $navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+
+                });
+            });
+        }
+
+    });
+</script>
+
+
+</html>
