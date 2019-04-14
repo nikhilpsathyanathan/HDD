@@ -1,6 +1,9 @@
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+import os
+if not os.path.exists('data'):
+    os.makedirs('data')
 
 data_train = pd.read_csv('train.csv',usecols=['model', 'capacity_bytes', 'failure', 'smart_5_raw','smart_9_raw','smart_10_raw', 'smart_184_raw' ,'smart_187_raw', 'smart_188_raw', 'smart_192_raw','smart_196_raw', 'smart_197_raw',  'smart_198_raw'])
 model_names=data_train['model'].drop_duplicates() 
