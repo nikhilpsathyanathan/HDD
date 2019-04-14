@@ -1,5 +1,7 @@
 # Deep Scan
 
+<img src="https://github.com/nikhilpsathyanathan/HDD/blob/master/screenshots/home.png" width="100%" height="50%">
+
 Deep scan is an ML-based analytic tool that would help you to predict your disk drives before it fails.
 
 #### New Features!
