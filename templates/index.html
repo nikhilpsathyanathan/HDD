@@ -1,0 +1,151 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Deep Scan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/server.js') }}"></script>
+</head>
+
+<body>
+
+    <div class="hero-head">
+        <header class="navbar">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a class="navbar-item">
+                        <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo">
+                    </a>
+                    <span class="navbar-burger burger" data-target="navbarMenuHeroC">
+                        <span></span>
+
+                    </span>
+                </div>
+                <div id="navbarMenuHeroC" class="navbar-menu">
+                    <div class="navbar-start">
+                        <figure class="image  is-64x64  navbar-item">
+                            <img src="/static/logo.png">
+                        </figure>
+                        <a class="navbar-item is-active" href="/">
+                            Home
+                        </a>
+                        <a class="navbar-item" href="/price">
+                            Pricing
+                        </a>
+                        <a class="navbar-item" href="/doc">
+                            Documentation
+                        </a>
+                        <span class="navbar-item">
+                            <a class="button is-success is-inverted" href="/github">
+                                <span class="icon">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>Download</span>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <section class="hero is-medium is-primary is-bold is-fullheight-with-navbar">
+        <div class="hero-body">
+            <div class="container is-mobile is-multiline is-centered">
+                <div class="columns">
+                    <div class="column">
+                        <br>
+                        <h1 class="title is-size-1 has-text-centered">Deep Scan</h1>
+                        <h1 class="has-text-centered">
+                            <a class="button is-rounded " onclick="scroll_to()" style="margin:20px">Try now</a>
+                        </h1>
+                    </div>
+                    <div class="column">
+                        <figure class="image is-3by1">
+                            <img src="/static/logo.png">
+                        </figure>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div>
+        <section class="hero is-white">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title  is-size-2">
+                        <p class="has-text-centered">Never lose your data, it worth Your happiness</p>
+                    </h1>
+                </div>
+            </div>
+    </div>
+
+    <div class="container " id="try">
+        </br>
+        <h1 class="title  is-size-2">
+            <p class="has-text-centered ">Want to Try</p>
+        </h1>
+        <section class="hero hero-body" is-medium ">
+                <div class=" columns is-desktop card " style=" margin:20px;padding:20px">
+            <div class="column">
+                <h1 class="has-text-black-bis is-size-4">Select your model</h1>
+                <div class="file is-medium">
+                    <form action="/csv" method="POST" enctype="multipart/form-data">
+                        <div class="select">
+                            <select name="model">
+                                <option value="ST4000DM000">ST4000DM000</option>
+                                <option value="ST8000DM002">ST8000DM002</option>
+                                <option value="ST8000NM0055">ST8000NM0055</option>
+                                <option value="ST12000NM0007">ST12000NM0007</option>
+                                <option value="ST500LM012 HN">ST500LM012 HN</option>
+                                <option value="Samsung SSD 850 EVO 1TB">Samsung SSD 850 EVO 1TB</option>
+                                <option value="HGST HMS5C4040BLE640">HGST HMS5C4040BLE640</option>
+                                <option value="HGST HMS5C4040ALE640">HGST HMS5C4040ALE640</option>
+                                <option value="TOSHIBA MQ01ABF050">TOSHIBA MQ01ABF050</option>
+                                <option value="all">ALL</option>
+                            </select>
+                        </div>
+                        </br>
+                        </br>
+                        <input type="file" name="csvfile">
+                        <input class="button is-rounded is-primary " type="submit" value="upload csv">
+                    </form></br>
+                </div>
+            </div>
+            <div class="column">
+                <h1 class="has-text-black-bis is-size-4">Select your model</h1>
+
+                <form action="/result" method="POST">
+                    <div class="select">
+                        <select name="model">
+                            <option value="ST4000DM000">ST4000DM000</option>
+                            <option value="ST8000DM002">ST8000DM002</option>
+                        </select>
+                    </div>
+                    <p>Email <input class="input" type="text" name="name" placeholder="Dont worry we would notify u" />
+                    </p>
+                    <p><input class="button is-rounded" onclick="wait_msg()" type="submit" value="submit" /></p>
+                </form>
+            </div>
+    </div>
+    </section>
+    </div>
+
+    <section class="is-dark ">
+
+        <footer class="footer has-background-black-ter ">
+            <div class="content has-text-centered">
+                <p class="has-text-white">
+                    <strong class="has-text-white">Deep Scan</strong> Developed with ❤️ by <a href="/">Rainbow Six</a>
+                </p>
+            </div>
+        </footer>
+    </section>
+</body>
+
+
+</html>
